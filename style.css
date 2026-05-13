@@ -50,6 +50,9 @@ p {
     border-radius: 5px;
     font-size: 16px;
 }
+.hero button:hover {
+    background-color: #1d4ed8;
+}
 footer {
     background-color: #1f2937;
     color: white;
@@ -79,4 +82,20 @@ footer {
         font-size: 28px;
     }
 
+}
+.service {
+    padding: 20px;
+}
+
+.service h3 {
+    margin-top: 25px;
+    color: #1f2937;
+}
+
+.service p {
+    margin-bottom: 15px;
+}
+.hero img {
+    margin-top: 20px;
+    border-radius: 8px;
 }
