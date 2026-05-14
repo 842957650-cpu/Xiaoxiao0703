@@ -1,101 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f3ff;
+  color: #333;
 }
 
 header {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background-color: #6d28d9;
+  color: white;
+  padding: 25px;
+  text-align: center;
 }
 
 nav {
-    margin-top: 10px;
+  margin-top: 12px;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 60%);
+  animation: waveMove 6s linear infinite;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 6px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: 0.2s;
 }
 
 nav a:hover {
-    color: #60a5fa;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-p {
-    padding: 20px;
-}.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #f4f4f4;
+@keyframes waveMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.hero {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 60px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .hero h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
+  font-size: 34px;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.hero button {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.hero button:hover {
-    background-color: #1d4ed8;
-}
-footer {
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-.content {
-    padding: 40px;
-    text-align: center;
-}
-
-.content h3 {
-    font-size: 30px;
-}
-
-.content p {
-    font-size: 18px;
-}
-@media (max-width: 768px) {
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-}
-.service {
-    padding: 20px;
-}
-
-.service h3 {
-    margin-top: 25px;
-    color: #1f2937;
-}
-
-.service p {
-    margin-bottom: 15px;
-}
 .hero img {
-    margin-top: 20px;
-    border-radius: 8px;
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #ede9fe;
+  padding: 50px 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  background-color: #6d28d9;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5b21b6;
+}
+
+footer {
+  margin-top: 40px;
+  background-color: #4c1d95;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .content {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+}
+.hero h2 {
+  font-family: "Segoe UI Semibold", "Segoe UI", Arial, sans-serif;
+  font-size: 42px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #2e1065;
+  text-transform: uppercase;
+}
+header {
+  border-radius: 16px;
+  margin: 10px;
 }
